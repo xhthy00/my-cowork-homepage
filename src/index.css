@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-ink-950 text-ink-100 antialiased;
+  font-feature-settings: "tnum";
+}
+
+::selection {
+  @apply bg-accent-500/30 text-white;
+}
+
+/* ---------- 滚动进入动效 ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- 背景网格（带渐隐遮罩） ---------- */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
+}
+
+/* ---------- 极光背景光斑 ---------- */
+.aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ---------- 渐变文字 ---------- */
+.text-gradient {
+  background: linear-gradient(100deg, #ffd27a 0%, #f09819 45%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-cool {
+  background: linear-gradient(100deg, #8b9dff 0%, #c084fc 50%, #f09819 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- 霓虹渐变边框卡片 ---------- */
+.neon-card {
+  position: relative;
+  border-radius: 1rem;
+  background: #0a0c10;
+}
+
+.neon-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(240, 152, 25, 0.5), rgba(255, 255, 255, 0.06) 40%, rgba(139, 157, 255, 0.35));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.45;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.neon-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- Shine 流光按钮：白橙光带扫过 + 呼吸外光 ---------- */
+@keyframes shine {
+  0% {
+    transform: translateX(-160%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(360%) skewX(-20deg);
+  }
+}
+
+@keyframes btnGlow {
+  0%,
+  100% {
+    box-shadow: 0 8px 40px -10px rgba(240, 152, 25, 0.55);
+  }
+
+  50% {
+    box-shadow:
+      0 10px 60px -6px rgba(245, 160, 30, 0.9),
+      0 0 24px -2px rgba(255, 210, 122, 0.5);
+  }
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  animation: btnGlow 2.6s ease-in-out infinite;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  bottom: -25%;
+  left: 0;
+  width: 55%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 28%,
+    rgba(255, 255, 255, 0.85) 48%,
+    rgba(255, 224, 168, 0.95) 58%,
+    rgba(255, 210, 122, 0.4) 70%,
+    transparent 100%
+  );
+  filter: blur(3px);
+  transform: translateX(-160%) skewX(-20deg);
+  animation: shine 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine {
+    animation: none;
+  }
+
+  .btn-shine::after {
+    display: none;
+  }
+}
+
+/* ---------- 截图边框光 ---------- */
+.shot-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 24px 64px -16px rgba(0, 0, 0, 0.7),
+    0 0 140px -28px rgba(240, 152, 25, 0.28);
+}
+
+/* 3D 倾斜容器 */
+.tilt-scene {
+  perspective: 1400px;
+}
+
+.tilt-item {
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* ---------- 终端块 ---------- */
+.terminal {
+  @apply rounded-xl border border-ink-700 bg-ink-900;
+}
+
+.terminal-bar {
+  @apply flex items-center gap-1.5 border-b border-ink-700 px-4 py-3;
+}
+
+.terminal-body {
+  @apply overflow-x-auto p-5 font-mono text-[13px] leading-7 text-ink-200;
+}
+
+/* ---------- 超大字排版 ---------- */
+.bigtype {
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060709;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b3345;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d475c;
+}
