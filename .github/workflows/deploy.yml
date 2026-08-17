@@ -27,10 +27,18 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: 22
           cache: npm
       - name: Install dependencies
-        run: npm ci --registry https://registry.npmjs.org
+        run: |
+          node -v
+          npm -v
+          npm install --no-fund --no-audit || {
+            echo "----- npm log -----"
+            log=$(ls -t "$HOME/.npm/_logs"/*debug*.log 2>/dev/null | head -1)
+            if [ -n "$log" ]; then cat "$log"; fi
+            exit 1
+          }
       - name: Build
         run: npm run build
       - name: Setup Pages
