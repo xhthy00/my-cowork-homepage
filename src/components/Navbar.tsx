@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Github, Menu, X } from "lucide-react";
+import { asset } from "../asset";
 
 const LINKS = [
   { href: "#features", label: "功能" },
@@ -31,7 +32,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#top" className="flex items-center gap-2.5">
-          <img src="/app-icon.png" alt="MyCowork" className="h-8 w-8 rounded-lg" />
+          <img src={asset("/app-icon.png")} alt="MyCowork" className="h-8 w-8 rounded-lg" />
           <span className="text-lg font-semibold text-white">MyCowork</span>
         </a>
 

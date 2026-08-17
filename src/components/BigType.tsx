@@ -1,3 +1,4 @@
+import { asset } from "../asset";
 import Reveal from "./Reveal";
 
 /** 超大字排版展示区（WorkBuddy 大 logo 风格） */
@@ -30,7 +31,7 @@ export default function BigType() {
         <Reveal delay={200}>
           <div className="mt-8 flex animate-float items-center justify-center gap-4">
             <img
-              src="/app-icon.png"
+              src={asset("/app-icon.png")}
               alt="MyCowork 牛同事"
               width={72}
               height={72}

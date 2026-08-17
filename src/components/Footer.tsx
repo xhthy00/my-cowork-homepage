@@ -1,4 +1,5 @@
 import { ArrowRight, Github } from "lucide-react";
+import { asset } from "../asset";
 import Reveal from "./Reveal";
 
 export function CTA() {
@@ -52,7 +53,7 @@ export default function Footer() {
     <footer className="border-t border-white/5 bg-ink-950 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <div className="flex items-center gap-3">
-          <img src="/app-icon.png" alt="MyCowork" className="h-7 w-7 rounded-md" />
+          <img src={asset("/app-icon.png")} alt="MyCowork" className="h-7 w-7 rounded-md" />
           <span className="text-sm font-medium text-ink-200">MyCowork</span>
           <span className="text-xs text-ink-500">本机办公数字员工</span>
         </div>

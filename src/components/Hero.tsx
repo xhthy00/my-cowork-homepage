@@ -1,4 +1,5 @@
 import { ArrowRight, Download } from "lucide-react";
+import { asset } from "../asset";
 import Reveal from "./Reveal";
 import LiveDemo from "./LiveDemo";
 
@@ -94,7 +95,7 @@ export default function Hero() {
                     </span>
                   </div>
                   <img
-                    src="/screenshots/workspace.png"
+                    src={asset("/screenshots/workspace.png")}
                     alt="MyCowork 工作区：对话、任务列表与文档预览同屏"
                     className="w-full bg-white"
                   />

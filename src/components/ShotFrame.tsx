@@ -1,4 +1,5 @@
 import { useRef, type MouseEvent } from "react";
+import { asset } from "../asset";
 
 interface ShotFrameProps {
   src: string;
@@ -44,7 +45,7 @@ export default function ShotFrame({ src, alt, caption, className = "" }: ShotFra
               <span className="ml-3 truncate text-xs text-ink-300">MyCowork</span>
             </div>
             <img
-              src={src}
+              src={asset(src)}
               alt={alt}
               loading="lazy"
               className="w-full bg-white object-cover object-top"
