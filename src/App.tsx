@@ -6,6 +6,7 @@ import BigType from "./components/BigType";
 import Features from "./components/Features";
 import Modes from "./components/Modes";
 import Assistants from "./components/Assistants";
+import Mcp from "./components/Mcp";
 import Channels from "./components/Channels";
 import SkillsModels from "./components/SkillsModels";
 import Architecture from "./components/Architecture";
@@ -25,6 +26,7 @@ export default function App() {
         <BigType />
         <Modes />
         <Assistants />
+        <Mcp />
         <Channels />
         <SkillsModels />
         <Architecture />
