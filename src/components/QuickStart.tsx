@@ -28,9 +28,9 @@ export default function QuickStart() {
   return (
     <section id="quickstart" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
       <SectionHeader
-        eyebrow="快速开始"
-        title="三分钟跑起来"
-        description="开发模式一条命令；正式使用可从 GitHub Releases 下载 macOS dmg 或 Windows 安装包。"
+        eyebrow="现在就开始"
+        title="三分钟，它就坐到你桌边"
+        description="开发者一条命令叫醒它；也可以直接下载安装包，请它正式入职。"
       />
 
       <div className="mx-auto max-w-3xl space-y-6">
@@ -55,9 +55,9 @@ export default function QuickStart() {
 
         <Reveal delay={240}>
           <div className="rounded-xl border border-accent-500/25 bg-accent-500/5 p-5 text-sm leading-7 text-ink-200">
-            <p className="mb-1 font-medium text-white">烟雾测试</p>
+            <p className="mb-1 font-medium text-white">试一句就知道</p>
             对它说：<span className="rounded bg-ink-800 px-2 py-0.5 font-mono text-xs">在桌面写 hello.txt，内容 hi</span>
-            ，允许写盘确认后，桌面应出现该文件。
+            。你一点头，文件就该出现在桌面上。
           </div>
         </Reveal>
       </div>

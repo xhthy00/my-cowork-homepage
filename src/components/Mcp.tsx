@@ -5,36 +5,36 @@ import SectionHeader from "./SectionHeader";
 const TRANSPORTS = [
   {
     icon: Terminal,
-    name: "本地 stdio",
-    desc: "用 command / args / 环境变量拉起本机 MCP，例如 npx 跑 sequential-thinking 或 Playwright。",
+    name: "住在你电脑里",
+    desc: "本机拉起一条工具链，像 Playwright、sequential-thinking，随叫随到，不必绕到云上。",
   },
   {
     icon: Globe,
-    name: "Streamable HTTP",
-    desc: "填远程 URL 和可选 Headers，连到托管的 MCP 服务，不必在本机再起一个进程。",
+    name: "远处伸过来一只手",
+    desc: "填一个地址，可选带上 Headers，托管的 MCP 就能用——不必再在本机开进程。",
   },
   {
     icon: Radio,
-    name: "SSE",
-    desc: "同样走远程 URL，适合仍以 Server-Sent Events 暴露工具的 MCP 端点。",
+    name: "细水长流的通道",
+    desc: "SSE 把远程工具轻轻推过来。老派、稳定，一样能接到牛同事手上。",
   },
 ];
 
 const ACTIONS = [
   {
     icon: FileJson,
-    title: "导入 mcp.json",
-    desc: "粘贴 Cursor / Claude 格式；重名会拒绝。也可以直接编辑 ~/.my-cowork/mcp.json。",
+    title: "把旧配置带过来",
+    desc: "Cursor、Claude 的 mcp.json 贴进来就走。名字撞了会拦住你，免得盖掉已经在岗的那位。",
   },
   {
     icon: Wrench,
-    title: "测试、编辑、开关",
-    desc: "每个连接器可测连通并显示工具数量，本地改命令和环境变量，远程改 URL 与 Headers。",
+    title: "通不通，一眼便知",
+    desc: "测连通、看工具数量，随时改、随时关。本地改命令，远程改地址。",
   },
   {
     icon: AtSign,
-    title: "@连接器名 按轮限定",
-    desc: "输入 @playwright 或从选择器插入，仅本轮启用对应 MCP 工具，其它工具不受影响。",
+    title: "你点名，它才伸手",
+    desc: "这一轮只要浏览器？打个 @playwright。别的手，先别伸。",
   },
 ];
 
@@ -51,9 +51,9 @@ export default function Mcp() {
   return (
     <section id="mcp" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
       <SectionHeader
-        eyebrow="连接器 · MCP"
-        title="把外部工具接到牛同事手上"
-        description="Hub → 连接器。本地进程、远程 HTTP / SSE 都能加；对话里用 @ 点名，只把本轮需要的 MCP 工具交给 Agent。"
+        eyebrow="接上世界"
+        title="给它一双手，去够得到的工具"
+        description="本机的、云上的，都能接到牛同事手上。你 @ 谁，它才用谁——不多伸手。"
       />
 
       <div className="grid gap-5 md:grid-cols-3">
@@ -86,7 +86,7 @@ export default function Mcp() {
             </div>
           </div>
           <p className="mt-3 text-center text-xs text-ink-400">
-            内置浏览器自动化走 Playwright MCP，按需安装 Chromium
+            想让它自己上网点一点？Playwright 已经在工具箱里。
           </p>
         </Reveal>
 

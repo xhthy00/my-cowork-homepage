@@ -45,10 +45,10 @@ function CountUp({ target, suffix = "", duration = 1600 }: CountUpProps) {
 }
 
 const STATS = [
-  { value: 2, suffix: " 种", label: "执行模式", sub: "单智能体 · 多智能体 Workforce" },
-  { value: 4, suffix: " 个", label: "远程渠道", sub: "飞书 / 微信可用 · 钉钉 / Telegram 即将推出" },
-  { value: 9, suffix: " 层", label: "Harness 分层", sub: "import-linter 在 CI 强制约束" },
-  { value: 100, suffix: "%", label: "数据留在本机", sub: "无云托管 · 无多租户 · 无 SSO" },
+  { value: 2, suffix: " 种", label: "干活的班底", sub: "一只同事，或一整个团队" },
+  { value: 4, suffix: " 个", label: "可以喊到的地方", sub: "飞书 / 微信已在岗 · 钉钉 / Telegram 在路上" },
+  { value: 9, suffix: " 层", label: "盖在本机的楼", sub: "一层托一层，梁不会架在屋顶上" },
+  { value: 100, suffix: "%", label: "数据留在家里", sub: "不出租 · 不合租 · 不办云上的工牌" },
 ];
 
 /** 数字滚动统计条 */

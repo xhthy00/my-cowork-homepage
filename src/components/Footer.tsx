@@ -12,13 +12,14 @@ export function CTA() {
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <Reveal>
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
-            雇一只永远在岗的
+            今晚就把
             <span className="text-accent-400">牛同事</span>
+            请回家
           </h2>
         </Reveal>
         <Reveal delay={100}>
           <p className="mx-auto mt-5 max-w-xl leading-8 text-ink-300">
-            描述任务，拿到能直接打开的 Word / Excel / PPT。本机跑、飞书 / 微信也能喊，数据不出你的电脑。
+            开口交代，成稿落在你的文件夹里。人在飞书、微信，喊一声也行。
           </p>
         </Reveal>
         <Reveal delay={200}>
@@ -30,7 +31,7 @@ export function CTA() {
               className="btn-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 to-accent-600 px-7 py-3.5 text-sm font-bold text-ink-950 shadow-[0_8px_40px_-8px_rgba(240,152,25,0.6)] transition-transform hover:scale-[1.03] active:scale-[0.98]"
             >
               <Github className="h-4 w-4" />
-              从 GitHub Releases 下载
+              领走安装包
             </a>
             <a
               href="https://github.com/xhthy00/my-cowork"
@@ -55,7 +56,7 @@ export default function Footer() {
         <div className="flex items-center gap-3">
           <img src={asset("/app-icon.png")} alt="MyCowork" className="h-7 w-7 rounded-md" />
           <span className="text-sm font-medium text-ink-200">MyCowork</span>
-          <span className="text-xs text-ink-500">本机办公数字员工</span>
+          <span className="text-xs text-ink-500">住在你电脑里的同事</span>
         </div>
 
         <div className="flex items-center gap-6 text-sm text-ink-400">

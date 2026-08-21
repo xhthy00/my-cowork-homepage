@@ -14,43 +14,43 @@ import SectionHeader from "./SectionHeader";
 const FEATURES = [
   {
     icon: HardDriveDownload,
-    title: "本机落盘",
-    desc: "产物直接写到你的工作区（如 ~/Documents/AIS），不是云端草稿。过程发现记在笔记里；侧栏只展示写文件工具和终稿路径。",
+    title: "文件落在你手里",
+    desc: "写进你的工作区，不是云端链接。双击就能打开，过程记在笔记里，终稿路径一目了然。",
   },
   {
     icon: Bot,
-    title: "单 / 多智能体",
-    desc: "单智能体一个 ReAct Agent 走完全程；多智能体 Workforce 由 Planner 拆任务、按依赖并行委派，失败可重规划。",
+    title: "一个人，或一整个班",
+    desc: "小事交给一只牛同事一气呵成；大事拆开、并行、再收拢。哪路翻了车，它会重新排班。",
   },
   {
     icon: LayoutGrid,
-    title: "办公助手目录",
-    desc: "按场景预加载 Skill，一键开始写周报、公文、表单、仪表盘、财务模型或合同审查。",
+    title: "从场景走进去",
+    desc: "周报、公文、表单、看板、财务模型、合同审查——选一个场景，提问已经替你拟好。",
   },
   {
     icon: Puzzle,
-    title: "Skills + SkillHub",
-    desc: "本机技能可开关、可授权给指定智能体；也可从 SkillHub 浏览并安装办公效率、内容创作、数据等套件。",
+    title: "本事可以加装",
+    desc: "技能像工具箱，开关和授权都由你。SkillHub 里还有办公、创作、数据等现成套件。",
   },
   {
     icon: KeyRound,
-    title: "自带模型面板",
-    desc: "设置 → API / 模型。Anthropic / OpenAI / DeepSeek / 通义 / Moonshot 等云厂商，以及 Ollama、LM Studio、vLLM。Key 存系统钥匙串。",
+    title: "大脑随你换",
+    desc: "云上的 Anthropic、OpenAI、DeepSeek、通义、Moonshot，或家里的 Ollama、LM Studio。钥匙进系统钥匙串，不进配置文件。",
   },
   {
     icon: Plug,
-    title: "连接器：本地与远程 MCP",
-    desc: "除本地 stdio 外，支持 Streamable HTTP 与 SSE；可填 URL、Headers，或导入 mcp.json。输入 @连接器名 只启用本轮对应工具。",
+    title: "把工具接到手上",
+    desc: "本机进程或远程 MCP，浏览器、知识库、自定义工具都能接。对话里 @ 点名，它才伸那只手。",
   },
   {
     icon: Search,
-    title: "内置联网检索",
-    desc: "Agent 可主动搜索并打开原文。设置 → 检索配置博查 / Brave / Tavily / Exa / SearXNG；未填 Key 时用 DuckDuckGo 兜底。",
+    title: "它会自己去翻",
+    desc: "调研时自己搜索、打开原文。你有检索钥匙就用；没有，DuckDuckGo 也能起步。",
   },
   {
     icon: MessagesSquare,
-    title: "对话体验升级",
-    desc: "思考过程用动态状态球展示检索 / 规划 / 执行；运行中发送钮变为停止；输入栏旁显示上下文占用。",
+    title: "看得见它在想",
+    desc: "检索、规划、执行，状态球一直在跳。忙的时候可以叫停；上下文还剩多少，一眼知道。",
   },
 ];
 
@@ -58,9 +58,9 @@ export default function Features() {
   return (
     <section id="features" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
       <SectionHeader
-        eyebrow="功能特性"
-        title="一只牛同事，还是一整个牛团队"
-        description="从单一文档生成到多任务并行交付，从本机对话到飞书 / 微信远程召唤，办公 Agent 需要的能力都装进你自己的电脑。"
+        eyebrow="它能做什么"
+        title="不只会聊天，还会把活干完"
+        description="从一张空白页，到一叠能打开的文件；从你的桌面，到飞书和微信里的一声招呼。办公该有的本事，都装进这台电脑。"
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

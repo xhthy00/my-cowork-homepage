@@ -6,19 +6,19 @@ import ShotFrame from "./ShotFrame";
 const MODES = [
   {
     icon: User,
-    name: "单智能体",
-    tagline: "一只牛同事",
-    desc: "一个 ReAct Agent 走完全程，轻量、适合单一文档或问答。直接交代一件事，拿到一个可打开的交付文件。",
-    steps: ["对话下达任务", "Agent 规划并调用工具", "写盘生成文档", "同窗口预览确认"],
+    name: "一只牛同事",
+    tagline: "轻活，一个人就够",
+    desc: "交代一件事，拿走一份成稿。不问流程，只问结果——适合单一文档、一次问答、马上能打开的那份文件。",
+    steps: ["开口交代", "它开始动手", "文件写入硬盘", "当场预览"],
     shot: "/screenshots/home-single-agent.png",
     alt: "单智能体主页",
   },
   {
     icon: Users,
-    name: "多智能体 Workforce",
-    tagline: "一整个牛团队",
-    desc: "Planner 拆任务 → 你确认子任务 → Coordinator 按依赖并行委派文档 / 浏览 / 开发工人，失败可重规划。适合拆解、并行、多格式一起交付。",
-    steps: ["Planner 拆解任务", "人工确认子任务", "按依赖并行执行", "汇总交付 + 失败重规划"],
+    name: "一整个牛团队",
+    tagline: "重活，叫上全班",
+    desc: "像带一个小团队：先拆题，你点头，再分头去写、去查、去敲。哪路翻了车，再排一次。适合拆解、并行、多种格式一起交。",
+    steps: ["拆成可做的事", "你来拍板", "分头并行", "收拢，或重来"],
     shot: "/screenshots/home-multi-agent.png",
     alt: "多智能体主页",
   },
@@ -29,9 +29,9 @@ export default function Modes() {
     <section id="modes" className="border-y border-white/5 bg-ink-900/40 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeader
-          eyebrow="执行模式"
-          title="简单的事交给一个人，复杂的事交给一个团队"
-          description="两种执行模式按需切换：单智能体轻量直达，多智能体 Workforce 负责拆解、并行与多格式交付。"
+          eyebrow="怎么干活"
+          title="一个人就够，还是叫上全班？"
+          description="轻活用一只手做完；重活拆成并行的几路，再把结果收回来。两种班底，按这件事的分量切换。"
         />
 
         <div className="space-y-20">

@@ -64,7 +64,7 @@ export default function Navbar() {
             href="#quickstart"
             className="btn-shine rounded-lg bg-gradient-to-r from-accent-400 to-accent-600 px-4 py-1.5 text-sm font-semibold text-ink-950 shadow-[0_4px_24px_-6px_rgba(240,152,25,0.6)] transition-transform hover:scale-[1.04] active:scale-[0.97]"
           >
-            下载安装
+            请它入职
           </a>
         </div>
 

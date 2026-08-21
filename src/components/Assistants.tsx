@@ -45,9 +45,9 @@ export default function Assistants() {
   return (
     <section id="assistants" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
       <SectionHeader
-        eyebrow="办公助手"
-        title="按场景开始，而不是从空白文档开始"
-        description="办公助手会预加载对应 Skill 并把推荐提问填进输入框。公文按机关常用稿面排版，套红发文对照 GB/T 9704-2012。"
+        eyebrow="从哪开始"
+        title="别从空白页开始"
+        description="选一个场景，技能已经就位，提问也拟好了。公文按机关稿面走，套红对照国标——像有人先铺好了桌。"
       />
 
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -62,7 +62,7 @@ export default function Assistants() {
               </div>
               <p className="text-sm leading-6 text-ink-300">{assistants}</p>
               <p className="mt-3 border-t border-ink-700 pt-3 text-sm text-accent-400">
-                产出：{output}
+                交给你：{output}
               </p>
             </div>
           </Reveal>
@@ -71,11 +71,10 @@ export default function Assistants() {
         <Reveal delay={120}>
           <div className="flex h-full flex-col justify-center rounded-2xl border border-dashed border-ink-600 bg-ink-900/50 p-6">
             <p className="text-sm leading-7 text-ink-300">
-              文档生成优先走捆绑的 <span className="text-white">OfficeCLI</span> 二进制，本机预览同样走
-              OfficeCLI watch；不可用时自动降级到内置 docx / xlsx / pptx 生成器。
+              成稿优先交给捆绑的 <span className="text-white">OfficeCLI</span> 精雕细琢，本机预览同步看着它长出来；它不在，就用内置生成器托底。
             </p>
             <p className="mt-4 text-xs leading-6 text-ink-400">
-              法务与公文均为辅助撰写 / 质检，不构成正式发文或法律意见。
+              法务和公文是助手，不是公章。重大事项请人复核。
             </p>
           </div>
         </Reveal>
@@ -86,21 +85,21 @@ export default function Assistants() {
           <ShotFrame
             src="/screenshots/assistants-docs.png"
             alt="文档类办公助手"
-            caption="文档类：周报、公文、表单"
+            caption="周报、公文、表单，从场景走进去"
           />
         </Reveal>
         <Reveal delay={100}>
           <ShotFrame
             src="/screenshots/assistants-tables.png"
             alt="表格类办公助手"
-            caption="表格类：台账、看板、财务模型"
+            caption="台账、看板、模型，数字也有人管"
           />
         </Reveal>
         <Reveal delay={200}>
           <ShotFrame
             src="/screenshots/assistants-legal.png"
             alt="法务与通用办公助手"
-            caption="法务与通用：合同审查、多格式协作"
+            caption="合同审查、多格式协作，桌已铺好"
           />
         </Reveal>
       </div>

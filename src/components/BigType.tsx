@@ -22,9 +22,9 @@ export default function BigType() {
 
         <Reveal delay={120}>
           <p className="mx-auto mt-8 max-w-xl text-sm leading-7 text-ink-300 md:text-base">
-            一只永远在岗的牛同事。数据不出你的电脑，
+            云端的 Agent 住在别人家里。
             <br className="hidden md:block" />
-            这就是 MyCowork 与云端 Agent 最大的不同。
+            这只，住在你的电脑上。
           </p>
         </Reveal>
 

@@ -17,9 +17,9 @@ export default function Architecture() {
   return (
     <section id="architecture" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
       <SectionHeader
-        eyebrow="架构"
-        title="单机胖客户端，一切都在你的电脑上"
-        description="Electron 启动时拉起本机 Python（FastAPI），渲染进程用 localhost HTTP + SSE 对话和看 Trace。工具调用都在本机进程内完成，没有「远端再回调本机」。"
+        eyebrow="长在你电脑里"
+        title="整栋楼，盖在你的机器上"
+        description="打开应用，本机的大脑就醒了。对话走 localhost，工具也在这台机器上动手——云只是可选的嘴，不是它的家。"
       />
 
       <div className="grid items-center gap-12 lg:grid-cols-5">
@@ -44,18 +44,18 @@ export default function Architecture() {
             </div>
           </div>
           <p className="mt-4 text-center text-xs text-ink-400">
-            可选：设置 → 远程连接 · 飞书长连接 / 微信扫码
+            人在外面时：飞书里喊一声，微信里扫个码
           </p>
         </Reveal>
 
         <Reveal delay={120} className="lg:col-span-3">
           <div className="space-y-2">
             <p className="mb-4 text-sm text-ink-300">
-              后端按 harness 九层划分，跨层依赖只允许向下，由
+              九层往下才准依赖，像盖房子不能把梁架在屋顶上。CI 里的
               <code className="mx-1 rounded bg-ink-800 px-1.5 py-0.5 text-xs text-accent-400">
                 import-linter
               </code>
-              在 CI 中强制约束。
+              盯着这件事。
             </p>
             {LAYERS.map((layer) => (
               <div

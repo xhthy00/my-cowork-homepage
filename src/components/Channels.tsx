@@ -9,28 +9,28 @@ const CHANNELS = [
     name: "飞书",
     status: "可用",
     logo: "/channels/lark.svg",
-    desc: "官方长连接，填 App ID / Secret 即可。无需公网 URL，也无需 Cloudflare 隧道。",
+    desc: "官方长连接，填好身份就在。不用隧道，也不用把电脑端口敞到公网。",
   },
   {
     id: "weixin",
     name: "微信",
     status: "可用",
     logo: "/channels/weixin.svg",
-    desc: "ClawBot 扫码登录，长轮询收消息。任务产出的 Word / PPT 可作为微信附件回发。",
+    desc: "扫一扫就上岗。做完的 Word、PPT，可以直接当微信文件发回来。",
   },
   {
     id: "telegram",
     name: "Telegram",
     status: "即将推出",
     logo: "/channels/telegram.svg",
-    desc: "通过 Telegram 与办公助手对话，同样不需要公网隧道。",
+    desc: "即将在 Telegram 里碰面。人在外面，同事还在，同样不必打洞。",
   },
   {
     id: "dingtalk",
     name: "钉钉",
     status: "即将推出",
     logo: "/channels/dingtalk.svg",
-    desc: "通过钉钉把本机数字员工接到工作群与单聊。",
+    desc: "工作群里那只牛同事，很快就到。",
   },
 ];
 
@@ -39,9 +39,9 @@ export default function Channels() {
     <section id="channels" className="border-y border-white/5 bg-ink-900/40 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeader
-          eyebrow="远程连接"
-          title="飞书长连接，微信扫码，随时喊牛同事"
-          description="设置 → 远程连接。陌生人先配对授权，通过后即可对话；飞书与微信都不需要把本机端口暴露到公网。"
+          eyebrow="人在外面"
+          title="飞书里喊一声，微信里扫个码"
+          description="不必把这台电脑敞到公网。它自己连上来，你在哪都能交代活。"
         />
 
         <div className="grid gap-5 sm:grid-cols-2">
@@ -87,9 +87,9 @@ export default function Channels() {
                 <ShieldCheck className="h-5 w-5" />
               </span>
               <div>
-                <h3 className="mb-1.5 text-base font-semibold text-white">配对后才能对话</h3>
+                <h3 className="mb-1.5 text-base font-semibold text-white">陌生人先敲门</h3>
                 <p className="text-sm leading-6 text-ink-300">
-                  未授权用户发来消息，本机会弹出批准 / 拒绝。配对通过后，常规写盘会自动放行；危险命令仍拦截，必须在桌面操作的 Skill 远程会被拒绝。
+                  未授权的人发来消息，本机先弹出批准。你点头，它才答话。日常写文件可以放手；危险命令，和必须坐在桌前的活，仍然拦着。
                 </p>
               </div>
             </div>
@@ -100,9 +100,9 @@ export default function Channels() {
                 <Coffee className="h-5 w-5" />
               </span>
               <div>
-                <h3 className="mb-1.5 text-base font-semibold text-white">保持唤醒</h3>
+                <h3 className="mb-1.5 text-base font-semibold text-white">别让电脑偷睡</h3>
                 <p className="text-sm leading-6 text-ink-300">
-                  远程通道和定时任务只在电脑醒着时可靠运行。设置 → 通用打开「保持唤醒」，可阻止空闲休眠；合盖或手动睡眠仍会中断。
+                  远程和定时要靠它醒着。设置里打开「保持唤醒」，空闲时也不打盹；合上盖，再勤快也得歇。
                 </p>
               </div>
             </div>

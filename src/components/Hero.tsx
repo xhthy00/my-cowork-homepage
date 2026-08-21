@@ -4,10 +4,10 @@ import Reveal from "./Reveal";
 import LiveDemo from "./LiveDemo";
 
 const CHIPS = [
-  { strong: "本地优先", rest: "· 数据不出你的电脑" },
-  { strong: "自带密钥", rest: "· 存系统钥匙串" },
-  { strong: "对话交付", rest: "· Word / Excel / PPT / 公文" },
-  { strong: "远程召唤", rest: "· 飞书长连接 / 微信扫码" },
+  { strong: "数据不出门", rest: "· 文件写在你硬盘上" },
+  { strong: "钥匙自己拿", rest: "· 进系统钥匙串" },
+  { strong: "开口即成稿", rest: "· Word / Excel / PPT / 公文" },
+  { strong: "人在外面也能喊", rest: "· 飞书 / 微信" },
 ];
 
 export default function Hero() {
@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-6xl px-6 text-center">
         <Reveal>
           <p className="mb-5 text-sm font-medium tracking-[0.35em] text-accent-400">
-            WORK SMARTER, ON YOUR OWN MACHINE
+            A COLLEAGUE ON YOUR MACHINE
           </p>
         </Reveal>
 
@@ -34,14 +34,14 @@ export default function Hero() {
             本机办公
             <span className="text-gradient">数字员工</span>
             <br />
-            一句话，交付整个任务
+            开口，桌上就是成稿
           </h1>
         </Reveal>
 
         <Reveal delay={150}>
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-ink-300 md:text-lg">
-            MyCowork 是跑在你自己电脑上的办公 Agent：描述任务，牛同事直接读写本机工作区、
-            生成可打开的文档，并在同一窗口里预览。飞书长连接或微信扫码，也能远程召唤。
+            不必在十个软件之间来回切。告诉它这周要什么，Word、Excel、PPT
+            会写进你自己的文件夹，当场预览。人在飞书或微信，它也在。
           </p>
         </Reveal>
 
@@ -66,13 +66,13 @@ export default function Hero() {
               className="btn-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 to-accent-600 px-8 py-3.5 text-sm font-bold text-ink-950 shadow-[0_8px_40px_-8px_rgba(240,152,25,0.6)] transition-transform hover:scale-[1.03] active:scale-[0.98]"
             >
               <Download className="h-4 w-4" />
-              下载 macOS / Windows
+              请它入职
             </a>
             <a
               href="#features"
               className="group inline-flex items-center gap-2 rounded-xl border border-ink-600 bg-ink-900/60 px-8 py-3.5 text-sm font-medium text-ink-100 backdrop-blur transition-colors hover:border-accent-500/50 hover:text-white"
             >
-              了解功能
+              看看它能干嘛
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
@@ -92,12 +92,12 @@ export default function Hero() {
                     <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
                     <span className="h-3 w-3 rounded-full bg-[#28c840]" />
                     <span className="ml-3 text-xs text-ink-300">
-                      工作区：对话 · 任务列表 · 交付文件 · 文档预览
+                      一屏做完：聊 · 干 · 交 · 看
                     </span>
                   </div>
                   <img
                     src={asset("/screenshots/workspace.png")}
-                    alt="MyCowork 工作区：对话、任务列表与文档预览同屏"
+                    alt="MyCowork 工作区：对话、任务和成稿预览同屏"
                     className="w-full bg-white"
                   />
                 </div>

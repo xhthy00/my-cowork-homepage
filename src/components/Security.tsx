@@ -5,36 +5,36 @@ import SectionHeader from "./SectionHeader";
 const ITEMS = [
   {
     icon: ShieldCheck,
-    title: "本地优先、单租户",
-    desc: "不做云托管、多租户、计费或 SSO。各成员独立部署、互不共享。",
+    title: "只为你一个人",
+    desc: "没有云上的合租、账单和公司账号。每人自己的牛同事，互不串门。",
   },
   {
     icon: FolderLock,
-    title: "路径白名单",
-    desc: "默认含用户主目录，可在设置中收紧；禁止 ../ 路径穿越。",
+    title: "它只能走到你允许的路",
+    desc: "默认可进家门，你可以收紧。想翻墙走 ../ 的，直接拦住。",
   },
   {
     icon: Ban,
-    title: "高危命令硬拒",
-    desc: "针对根目录的破坏性命令（如 rm -rf /）直接拒单，不进入审批。",
+    title: "危险的手，不经过你",
+    desc: "冲着根目录的破坏，连审批都不给，直接拒。",
   },
   {
     icon: Globe2,
-    title: "远程通道收紧",
-    desc: "陌生人先配对授权才能对话。配对后常规写盘自动放行；危险命令仍拦截；必须在桌面操作的 Skill 远程会被拒绝。",
+    title: "远程也要先敲门",
+    desc: "陌生人先配对，你点头才答话。日常写盘可以放手；危险命令和必须坐在桌前的活，远程使不上。",
   },
 ];
 
-const NOT_DOING = ["桌面 GUI Computer Use", "自训练模型", "24 小时无人值守"];
+const NOT_DOING = ["替你点遍整个桌面", "自训练模型", "通宵无人值守"];
 
 export default function Security() {
   return (
     <section id="security" className="border-y border-white/5 bg-ink-900/40 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeader
-          eyebrow="安全边界"
-          title="模型、文件和密钥，都留在本机"
-          description="密钥不写进配置文件：Electron 用系统钥匙串（macOS Keychain / Windows Credential Manager）保管，启动后端时注入环境变量。"
+          eyebrow="边界"
+          title="秘密留在这台机器上"
+          description="模型可以是别人的，文件和钥匙是你的。Key 进系统钥匙串，不进那份谁都能翻的配置。"
         />
 
         <div className="grid gap-5 sm:grid-cols-2">
@@ -59,13 +59,13 @@ export default function Security() {
               <MinusCircle className="h-5 w-5" />
             </span>
             <div className="text-sm leading-6 text-ink-300">
-              <span className="font-medium text-ink-100">明确不做：</span>
+              <span className="font-medium text-ink-100">它不做什么：</span>
               {NOT_DOING.map((item) => (
                 <span key={item} className="mx-1.5 rounded-md bg-ink-800 px-2 py-0.5 text-xs">
                   {item}
                 </span>
               ))}
-              <span className="ml-1 text-ink-400">（关机则定时与 webhook 都停）</span>
+              <span className="ml-1 text-ink-400">你关机，它也下班。</span>
             </div>
           </div>
         </Reveal>

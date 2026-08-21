@@ -83,7 +83,7 @@ export default function LiveDemo() {
       {phase === "thinking" && (
         <div className="mt-4 flex items-center gap-2.5 pl-11 text-sm text-ink-300">
           <Loader2 className="h-4 w-4 animate-spin text-accent-400" />
-          规划中 · 牛同事正在拆解任务…
+          它在拆这件事…
         </div>
       )}
 
@@ -121,7 +121,7 @@ export default function LiveDemo() {
         <div className="mt-5 pl-11">
           <div className="mb-2.5 flex items-center gap-1.5 text-xs font-medium text-accent-400">
             <Sparkles className="h-3.5 w-3.5" />
-            任务完成 · 已写入工作区
+            活干完了 · 已经写进你的文件夹
           </div>
           <div className="grid grid-cols-2 gap-2.5">
             {SCRIPT.outputs.map((file) => (
@@ -144,7 +144,7 @@ export default function LiveDemo() {
       <div className="mt-5 flex items-center justify-between border-t border-ink-700 pt-4">
         <div className="flex items-center gap-2 text-xs text-ink-400">
           <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-emerald-400" />
-          本机运行中 · localhost
+          在你这台电脑上
         </div>
         <div className="flex items-center gap-1.5 text-xs text-ink-500">
           <FileText className="h-3.5 w-3.5" />
