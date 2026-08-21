@@ -19,7 +19,7 @@ const STEPS = [
   },
   {
     title: "4 · 首次配置",
-    code: "智能体 → 模型 → 选厂商 · 填 API Key · 保存",
+    code: "设置 → API / 模型 → 选厂商 · 填 API Key · 保存",
     comment: "校验通过才会写入系统钥匙串",
   },
 ];

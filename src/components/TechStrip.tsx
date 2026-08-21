@@ -7,8 +7,10 @@ const STACK = [
   "SQLite + sqlite-vec",
   "Tailwind",
   "Playwright MCP",
+  "Streamable HTTP",
   "APScheduler",
-  "Cloudflare Tunnel",
+  "飞书长连接",
+  "微信 iLink",
 ];
 
 /** 技术栈跑马灯 */

@@ -4,9 +4,9 @@ import {
   LayoutGrid,
   Puzzle,
   KeyRound,
-  Globe,
-  BrainCircuit,
-  Radio,
+  Plug,
+  Search,
+  MessagesSquare,
 } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
@@ -15,7 +15,7 @@ const FEATURES = [
   {
     icon: HardDriveDownload,
     title: "本机落盘",
-    desc: "产物直接写到你的工作区（如 ~/Documents/AIS），不是云端草稿。任务结束自动清理 _scratch/ 中间文件，不碰工作区外的东西。",
+    desc: "产物直接写到你的工作区（如 ~/Documents/AIS），不是云端草稿。过程发现记在笔记里；侧栏只展示写文件工具和终稿路径。",
   },
   {
     icon: Bot,
@@ -35,22 +35,22 @@ const FEATURES = [
   {
     icon: KeyRound,
     title: "自带模型面板",
-    desc: "Anthropic / OpenAI / DeepSeek / 通义 / Moonshot 等云厂商，以及 Ollama、LM Studio、vLLM 本地模型。Key 存系统钥匙串，校验通过才保存。",
+    desc: "设置 → API / 模型。Anthropic / OpenAI / DeepSeek / 通义 / Moonshot 等云厂商，以及 Ollama、LM Studio、vLLM。Key 存系统钥匙串。",
   },
   {
-    icon: Globe,
-    title: "连接器与浏览器",
-    desc: "MCP 连接日常工具；内置浏览器自动化（Playwright MCP，按需安装 Chromium）。",
+    icon: Plug,
+    title: "连接器：本地与远程 MCP",
+    desc: "除本地 stdio 外，支持 Streamable HTTP 与 SSE；可填 URL、Headers，或导入 mcp.json。输入 @连接器名 只启用本轮对应工具。",
   },
   {
-    icon: BrainCircuit,
-    title: "记忆 · 定时 · 调度",
-    desc: "长期记忆写入本机 SQLite；带 schedule 的 Skill 由本机 APScheduler 触发定时执行。",
+    icon: Search,
+    title: "内置联网检索",
+    desc: "Agent 可主动搜索并打开原文。设置 → 检索配置博查 / Brave / Tavily / Exa / SearXNG；未填 Key 时用 DuckDuckGo 兜底。",
   },
   {
-    icon: Radio,
-    title: "可选远程入口",
-    desc: "飞书机器人经 Cloudflare Tunnel 把本机 /webhook/lark 暴露为 HTTPS，随时随地召唤你的数字员工。",
+    icon: MessagesSquare,
+    title: "对话体验升级",
+    desc: "思考过程用动态状态球展示检索 / 规划 / 执行；运行中发送钮变为停止；输入栏旁显示上下文占用。",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function Features() {
       <SectionHeader
         eyebrow="功能特性"
         title="一只牛同事，还是一整个牛团队"
-        description="从单一文档生成到多任务并行交付，MyCowork 把办公 Agent 需要的能力都装进了你自己的电脑。"
+        description="从单一文档生成到多任务并行交付，从本机对话到飞书 / 微信远程召唤，办公 Agent 需要的能力都装进你自己的电脑。"
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

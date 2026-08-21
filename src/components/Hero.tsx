@@ -7,6 +7,7 @@ const CHIPS = [
   { strong: "本地优先", rest: "· 数据不出你的电脑" },
   { strong: "自带密钥", rest: "· 存系统钥匙串" },
   { strong: "对话交付", rest: "· Word / Excel / PPT / 公文" },
+  { strong: "远程召唤", rest: "· 飞书长连接 / 微信扫码" },
 ];
 
 export default function Hero() {
@@ -40,7 +41,7 @@ export default function Hero() {
         <Reveal delay={150}>
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-ink-300 md:text-lg">
             MyCowork 是跑在你自己电脑上的办公 Agent：描述任务，牛同事直接读写本机工作区、
-            生成可打开的文档，并在同一窗口里预览。
+            生成可打开的文档，并在同一窗口里预览。飞书长连接或微信扫码，也能远程召唤。
           </p>
         </Reveal>
 

@@ -83,7 +83,7 @@ export default function LiveDemo() {
       {phase === "thinking" && (
         <div className="mt-4 flex items-center gap-2.5 pl-11 text-sm text-ink-300">
           <Loader2 className="h-4 w-4 animate-spin text-accent-400" />
-          牛同事正在拆解任务…
+          规划中 · 牛同事正在拆解任务…
         </div>
       )}
 

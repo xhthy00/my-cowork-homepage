@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
 
 const LAYERS = [
-  { level: "L9", name: "入口 server/", desc: "HTTP / SSE / webhook / 定时触发" },
+  { level: "L9", name: "入口 server/", desc: "HTTP / SSE / 远程通道 / 定时触发" },
   { level: "L8", name: "编排 orchestrator/", desc: "任务生命周期、会话" },
   { level: "L7", name: "执行 graphs/ agents/ runtime/", desc: "LangGraph、checkpoint、预算闸" },
   { level: "L6", name: "记忆 memory/", desc: "短期上下文 + 长期向量记忆" },
@@ -33,7 +33,7 @@ export default function Architecture() {
             </div>
             <div className="terminal-body space-y-1">
               <p className="text-ink-100">Electron 渲染进程 (React)</p>
-              <p className="pl-4 text-ink-400">对话 / 工作区 / 助手 / Skills / 模型</p>
+              <p className="pl-4 text-ink-400">对话 / 工作区 / 助手 / 连接器 / 设置</p>
               <p className="pl-8 text-accent-400">│ HTTP + SSE</p>
               <p className="text-ink-100">Electron 主进程 (Node)</p>
               <p className="pl-4 text-ink-400">spawn 后端 · Keychain · PDF · 文件对话框</p>
@@ -44,7 +44,7 @@ export default function Architecture() {
             </div>
           </div>
           <p className="mt-4 text-center text-xs text-ink-400">
-            可选：Cloudflare Tunnel → 飞书事件订阅
+            可选：设置 → 远程连接 · 飞书长连接 / 微信扫码
           </p>
         </Reveal>
 

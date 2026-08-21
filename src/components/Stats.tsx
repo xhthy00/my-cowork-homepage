@@ -46,7 +46,7 @@ function CountUp({ target, suffix = "", duration = 1600 }: CountUpProps) {
 
 const STATS = [
   { value: 2, suffix: " 种", label: "执行模式", sub: "单智能体 · 多智能体 Workforce" },
-  { value: 10, suffix: "+", label: "模型厂商", sub: "云端 + Ollama / vLLM 本地推理" },
+  { value: 4, suffix: " 个", label: "远程渠道", sub: "飞书 / 微信可用 · 钉钉 / Telegram 即将推出" },
   { value: 9, suffix: " 层", label: "Harness 分层", sub: "import-linter 在 CI 强制约束" },
   { value: 100, suffix: "%", label: "数据留在本机", sub: "无云托管 · 无多租户 · 无 SSO" },
 ];

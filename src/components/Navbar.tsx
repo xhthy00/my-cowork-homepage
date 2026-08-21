@@ -6,6 +6,7 @@ const LINKS = [
   { href: "#features", label: "功能" },
   { href: "#modes", label: "执行模式" },
   { href: "#assistants", label: "办公助手" },
+  { href: "#channels", label: "远程连接" },
   { href: "#architecture", label: "架构" },
   { href: "#security", label: "安全" },
   { href: "#quickstart", label: "快速开始" },

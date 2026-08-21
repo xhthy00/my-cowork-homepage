@@ -18,7 +18,7 @@ export function CTA() {
         </Reveal>
         <Reveal delay={100}>
           <p className="mx-auto mt-5 max-w-xl leading-8 text-ink-300">
-            描述任务，拿到能直接打开的 Word / Excel / PPT。数据不出你的电脑，这就是 MyCowork。
+            描述任务，拿到能直接打开的 Word / Excel / PPT。本机跑、飞书 / 微信也能喊，数据不出你的电脑。
           </p>
         </Reveal>
         <Reveal delay={200}>
@@ -67,8 +67,8 @@ export default function Footer() {
           >
             GitHub
           </a>
-          <a href="#features" className="transition-colors hover:text-white">
-            功能
+          <a href="#channels" className="transition-colors hover:text-white">
+            远程连接
           </a>
           <a href="#quickstart" className="transition-colors hover:text-white">
             快速开始

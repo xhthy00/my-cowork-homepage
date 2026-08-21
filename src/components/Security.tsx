@@ -21,7 +21,7 @@ const ITEMS = [
   {
     icon: Globe2,
     title: "远程通道收紧",
-    desc: "含写盘 / exec / 文档生成的 Skill 不能经飞书远程触发；webhook 需配置校验 token 与来源 IP。",
+    desc: "陌生人先配对授权才能对话。配对后常规写盘自动放行；危险命令仍拦截；必须在桌面操作的 Skill 远程会被拒绝。",
   },
 ];
 
